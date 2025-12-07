@@ -1,0 +1,40 @@
+/* --- NEW ADDITIONS FOR 3D FEATURES & EXTRAS --- */
+
+/* 1. Custom Gold Cursor */
+.cursor-dot,
+.cursor-outline {
+    position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
+    border-radius: 50%; z-index: 9999; pointer-events: none;
+}
+.cursor-dot { width: 8px; height: 8px; background-color: var(--accent); }
+.cursor-outline {
+    width: 40px; height: 40px; border: 1px solid var(--accent);
+    transition: width 0.2s, height 0.2s, top 0.1s, left 0.1s;
+}
+
+/* 2. 3D Testimonial Slider (Swiper.js Coverflow) */
+.swiper-container { width: 100%; padding-top: 50px; padding-bottom: 50px; }
+.swiper-slide {
+    background-position: center; background-size: cover; width: 300px; height: 350px;
+    background: #fff; border-radius: 10px; box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 30px; text-align: center; border-top: 5px solid var(--accent);
+}
+.swiper-pagination-bullet-active { background: var(--accent) !important; }
+
+/* 3. Cookie Consent Banner */
+#cookie-banner {
+    position: fixed; bottom: -100px; left: 0; width: 100%;
+    background: var(--primary); color: white; padding: 15px; text-align: center;
+    z-index: 9999; transition: bottom 0.5s; box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+}
+#cookie-banner button {
+    background: var(--accent); color: var(--primary); border: none;
+    padding: 8px 20px; margin-left: 20px; font-weight: bold; cursor: pointer;
+}
+
+/* 4. Canvas Background (Constellation Effect) */
+#canvas-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0; opacity: 0.3; pointer-events: none;
+}
